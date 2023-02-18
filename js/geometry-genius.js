@@ -41,11 +41,11 @@ function getFrisTypeOfArea(firstInput, secondInput) {
     const secondInputValue = getData(secondInput);
 
     if (
-        firstInputValue == "" || 
-        secondInputValue == "" || 
-        firstInputValue <= 0 || 
-        secondInputValue <= 0 || 
-        isNaN(firstInputValue) || 
+        firstInputValue == "" ||
+        secondInputValue == "" ||
+        firstInputValue <= 0 ||
+        secondInputValue <= 0 ||
+        isNaN(firstInputValue) ||
         isNaN(secondInputValue)
     ) {
         return alert("Please enter valid width & height input");
@@ -139,13 +139,13 @@ function displayTableData(serial, shapeName, areaValue) {
 }
 
 // cart color changing part 
-const getColors = (colorId) =>{
-    const randomNumber = Math.floor(Math.random() * 16777215);
-    const randomCode = "#" + randomNumber.toString(16);
-    colorId.style.backgroundColor = randomCode;
-}
-document.getElementById("colorChangeTriangle").addEventListener("mousemove", getColors(colorChangeTriangle));
-document.getElementById("colorChangeRectangle").addEventListener("mousemove", getColors(colorChangeRectangle));
+// const getColors = (colorId) => {
+//     const randomNumber = Math.floor(Math.random() * 16777215);
+//     const randomCode = "#" + randomNumber.toString(16);
+//     colorId.style.backgroundColor = randomCode;
+// }
+// document.getElementById("colorChangeTriangle").addEventListener("mousemove", getColors(colorChangeTriangle));
+// document.getElementById("colorChangeRectangle").addEventListener("mousemove", getColors(colorChangeRectangle));
 // document.getElementById("colorChangeParallelogram").addEventListener("mousemove", getColors(colorChangeParallelogram));
 // document.getElementById("colorChangeRhombus").addEventListener("mousemove", getColors(colorChangeRhombus));
 // document.getElementById("colorChangePentagon").addEventListener("mousemove", getColors(colorChangePentagon));
@@ -153,4 +153,3 @@ document.getElementById("colorChangeRectangle").addEventListener("mousemove", ge
 
 // document.getElementById("colorChangeTriangle").addEventListener("mouseover", getColors)
 
-  
