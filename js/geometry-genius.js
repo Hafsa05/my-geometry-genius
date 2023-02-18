@@ -146,8 +146,8 @@ const getColors = (colorId) => {
 }
 document.getElementById("colorChangeTriangle").addEventListener("mousemove", getColors(colorChangeTriangle));
 document.getElementById("colorChangeRectangle").addEventListener("mousemove", getColors(colorChangeRectangle));
-document.getElementById("colorChangeParallelogram").addEventListener("mousemove", getColors(colorChangeParallelogram));
-document.getElementById("colorChangeRhombus").addEventListener("mousemove", getColors(colorChangeRhombus));
+// document.getElementById("colorChangeParallelogram").addEventListener("mousemove", getColors(colorChangeParallelogram));
+// document.getElementById("colorChangeRhombus").addEventListener("mousemove", getColors(colorChangeRhombus));
 // document.getElementById("colorChangePentagon").addEventListener("mousemove", getColors(colorChangePentagon));
 // document.getElementById("colorChangeEllipse").addEventListener("mousemove", getColors(colorChangeEllipse));
 
