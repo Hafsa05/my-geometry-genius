@@ -159,7 +159,6 @@ coloredTriangle.addEventListener("mouseenter", function () {
     const color = generateRandomColor();
     this.style.backgroundColor = color;
 });
-
 coloredRectangle.addEventListener("mouseenter", function () {
     const color = generateRandomColor();
     this.style.backgroundColor = color;
