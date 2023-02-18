@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Geometry Genius</title>
+
+  <!-- daisyUI & tailwind css link  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header class="lg:px-7">
+    <div class="navbar bg-sky-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </label>
+        </div>
+        <a class="font-bold text-xl ml-5">Interactive<br><span class="font-normal text-slate-600">Geometry Genius</span></a>
+      </div>
+      <div class="navbar-end">
+        <a href="blog.html" class="bg-sky-500 font-bold px-6 py-2 text-white rounded mr-5">Blog</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="md:flex lg:px-7">
+      <!-- geometry shapes chart part  --> 
+      <div class="geometry-shapes h-[70%] w-full  md:w-[70%] lg:w-[70%] mt-5 gap-5 md-flex grid md:grid-cols-2 lg:grid-cols-3">
+        
+        <!-- 1. Triangle card start -->
+        <div id="colorChangeTriangle" class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/triangle.png" alt="Triangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="triangle-name" class="card-title">Triangle</h2>
+            <p>Area (A) = 0.5 x b x h</p>
+            <div class="flex">
+              <input id="triangle-width" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="b">
+              <p class="m-[7px]">cm</p>
+              <input id="triangle-height" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="h">
+              <p class="m-[7px]">cm</p>
+              <div class="form-control">
+                <label class="cursor-pointer label">
+                  <input type="checkbox" checked=" " class="checkbox checkbox-info" />
+                </label>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button id="triangle-cal" class="bg-sky-500 font-bold px-6 py-2 text-white rounded mr-5">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Triangle card end -->
+
+        <!-- 2. Rectangle card start -->
+        <div id="colorChangeRectangle" class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/rectangle.png" alt="Rectangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="rectangle-name" class="card-title">Rectangle</h2>
+            <p>Area (A) = w x l</p>
+            <div class="flex">
+              <input id="rectangle-width" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="w">
+              <p class="m-[7px]">cm</p>
+              <input id="rectangle-height" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="l">
+              <p class="m-[7px]">cm</p>
+              <div class="form-control">
+                <label class="cursor-pointer label">
+                  <input type="checkbox" checked="checked" class="checkbox checkbox-info" />
+                </label>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button id="rectangle-cal" class="bg-sky-500 font-bold px-6 py-2 text-white rounded mr-5">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Rectangle card end -->
+
+        <!-- 3. Parallelogram card start -->
+        <div id="colorChangeParallelogram" class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="parallelogram-name" class="card-title">Parallelogram</h2>
+            <p>Area (A) = b x h</p>
+            <div class="flex">
+              <input id="parallelogram-width" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="b">
+              <p class="m-[7px]">cm</p>
+              <input id="parallelogram-height" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="h">
+              <p class="m-[7px]">cm</p>
+              <div class="form-control">
+                <label class="cursor-pointer label">
+                  <input type="checkbox" checked="checked" class="checkbox checkbox-info" />
+                </label>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button id="parallelogram-cal" class="bg-sky-500 font-bold px-6 py-2 text-white rounded mr-5">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Parallelogram card end -->
+
+        <!-- 4. Rhombus card start -->
+        <div id="colorChangeRhombus" class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/rhombus.png" alt="Rhombus" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="rhombus-name" class="card-title">Rhombus</h2>
+            <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+            <div class="flex">
+              <input id="rhombus-width" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="d1">
+              <p class="m-[7px]">cm</p>
+              <input id="rhombus-height" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="d2">
+              <p class="m-[7px]">cm</p>
+              <div class="form-control">
+                <label class="cursor-pointer label">
+                  <input type="checkbox" checked="checked" class="checkbox checkbox-info" />
+                </label>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button id="rhombus-cal" class="bg-sky-500 font-bold px-6 py-2 text-white rounded mr-5">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Rhombus card end -->
+
+        <!-- 5. Pentagon card start -->
+        <div id="colorChangePentagon" class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/pentagon.png" alt="Pentagon" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="pentagon-name" class="card-title">Pentagon</h2>
+            <p>Area (A) = 0.5 x p x b </p>
+            <div class="flex">
+              <input id="pentagon-width" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="p">
+              <p class="m-[7px]">cm</p>
+              <input id="pentagon-height" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="b">
+              <p class="m-[7px]">cm</p>
+              <div class="form-control">
+                <label class="cursor-pointer label">
+                  <input type="checkbox" checked="checked" class="checkbox checkbox-info" />
+                </label>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button id="pentagon-cal" class="bg-sky-500 font-bold px-6 py-2 text-white rounded mr-5">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pentagon card end -->
+
+        <!-- 6. Ellipse card start -->
+        <div id="colorChangeEllipse" class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/ellipse.png" alt="Ellipse" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="ellipse-name" class="card-title">Ellipse</h2>
+            <p>Area (A) = π x a x b </p>
+            <div class="flex">
+              <input id="ellipse-width" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="a">
+              <p class="m-[7px]">cm</p>
+              <input id="ellipse-height" class="bg-slate-100 w-24 m-[7px] pl-2" type="text" placeholder="b">
+              <p class="m-[7px]">cm</p>
+              <div class="form-control">
+                <label class="cursor-pointer label">
+                  <input type="checkbox" checked="checked" class="checkbox checkbox-info" />
+                </label>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button id="ellipse-cal" class="bg-sky-500 font-bold px-6 py-2 text-white rounded mr-5" >Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Ellipse card end -->
+
+      </div>
+
+      <!-- area calculation showing table starts-->
+      <div class="area-calculation w-full md:w-[30%] lg:w-[30%] mx-auto">
+        <h1 class="text-5xl text-center font-semibold underline mt-8">
+          Area calculation 
+        </h1>
+        <div class="overflow-x-auto">
+          <table id="container-table" class="table w-full">
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
+      <!-- area data showing table ends-->
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- js file link  -->
+  <script src="js/geometry-genius.js"></script>
+
+</body>
+</html>
