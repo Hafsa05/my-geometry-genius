@@ -31,78 +31,90 @@
     </div>
   </header>
 
-  <div class="lg:px-7 mt-8">
-    <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
-      <div class="collapse-title text-xl font-medium">
-        1. What is DOM and what is the purpose of DOM?
+  <main>
+    <h2 class="italic underline text-center font-semibold text-xl mt-5">Assignment's Question - Answer</h2>
+    <div class="lg:px-7 mt-8">
+      <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
+        <div class="collapse-title text-xl font-medium">
+          1. What is DOM and what is the purpose of DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The full form of DOM is Document Object Model. It is a programming interface system for web documentation.
+            It
+            allows dynamical access and manipulate of the content, structure of web page. It is used to widely in
+            JavaScript programming to create dynamic, interactive web applications. <br>
+            The main purpose of DOM is to provide a structured representation of web document that can be accessed and
+            control over dynamically. DOM represents as a tree-like structure, and every node in the tree corresponds an
+            element, attribute, or piece of text in the web document. By accessing the power of modifying the properties
+            and methods of these nodes, developers can change the style, behavior, and content of the web page in
+            real-time. It helps web developers to create interactive web pages in response to user actions. These user
+            actions are called events in this system. By handling these events we can make user experience better.
+          </p>
+        </div>
       </div>
-      <div class="collapse-content">
-        <p>
-          The full form of DOM is Document Object Model. It is a programming interface system for web documentation. It
-          allows dynamical access and manipulate of the content, structure of web page. It is used to widely in
-          JavaScript programming to create dynamic, interactive web applications. <br>
-          The main purpose of DOM is to provide a structured representation of web document that can be accessed and
-          control over dynamically. DOM represents as a tree-like structure, and every node in the tree corresponds an
-          element, attribute, or piece of text in the web document. By accessing the power of modifying the properties
-          and methods of these nodes, developers can change the style, behavior, and content of the web page in
-          real-time. It helps web developers to create interactive web pages in response to user actions. These user
-          actions are called events in this system. By handling these events we can make user experience better.
-        </p>
+
+      <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
+        <div class="collapse-title text-xl font-medium">
+          2. How will you select HTML elements using DOM? Name the DOM methods.
+        </div>
+        <div class="collapse-content">
+          <p>
+            To select HTML elements using DOM, we can use various DOM methods and some most commonly used methods are:
+          </p> <br>
+          <p>
+            i. getElementById(): This method select and returns element having a specific ID. <br>
+            ii. getElementsByTagName(): This method select and returns a collection of elements having specific html tag
+            name. <br>
+            iii. getElementsByClassName(): This method select and returns a collection of elements having same class
+            name. <br>
+            iv. querySelector(): This method returns the first element that matches the specific CSS selector. <br>
+            v. querySelectorAll(): This method returns a list of all elements that match the specified CSS selector.
+            <br>
+
+          </p>
+        </div>
+      </div>
+
+      <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
+        <div class="collapse-title text-xl font-medium">
+          3. What is event bubble?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event bubble is a special method of the Document Object Model (DOM). It helps events to propagate or bubble
+            up
+            from the target element to its ancestors in the DOM tree until it reach to the root of the document. In this
+            technique an event is triggered on an element and it can also trigger on all of its parent elements, unless
+            one of the parent elements stops the propagation of the event. Event bubbling is important as it allows us
+            to
+            get access to the parent events of the DOM architecture of a web page. By this we can easily access, modify
+            efficiently higher level elements. Besides, to stop unnecessary propagation we can use
+            "stopImmediatePropagation()" or "stopPropagation()" method.
+          </p>
+        </div>
+      </div>
+
+      <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
+        <div class="collapse-title text-xl font-medium">
+          4. What is a callback function and why will you use it?
+        </div>
+        <div class="collapse-content">
+          <p>
+            In JavaScript callback function an unique function which is passed as an argument in another function. This
+            callback function is called inside the higher level or parent function and execute after the execution of
+            the
+            parent function. callback functions are mostly used in the event-driven programming like JavaScript to
+            handle
+            asynchronous programming. Usually to make an asynchronous request on a server using an object, we can
+            provide
+            a callback function to be executed when the server responds with object data.
+          </p>
+        </div>
       </div>
     </div>
+  </main>
 
-    <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
-      <div class="collapse-title text-xl font-medium">
-        2. How will you select HTML elements using DOM? Name the DOM methods.
-      </div>
-      <div class="collapse-content">
-        <p>
-          To select HTML elements using DOM, we can use various DOM methods and some most commonly used methods are:
-        </p> <br>
-        <p>
-          i. getElementById(): This method select and returns element having a specific ID. <br>
-          ii. getElementsByTagName(): This method select and returns a collection of elements having specific html tag
-          name. <br>
-          iii. getElementsByClassName(): This method select and returns a collection of elements having same class name. <br>
-          iv. querySelector(): This method returns the first element that matches the specific CSS selector. <br>
-          v. querySelectorAll(): This method returns a list of all elements that match the specified CSS selector. <br>
-
-        </p>
-      </div>
-    </div>
-
-    <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
-      <div class="collapse-title text-xl font-medium">
-        3. What is event bubble?
-      </div>
-      <div class="collapse-content">
-        <p>
-          Event bubble is a special method of the Document Object Model (DOM). It helps events to propagate or bubble up
-          from the target element to its ancestors in the DOM tree until it reach to the root of the document. In this
-          technique an event is triggered on an element and it can also trigger on all of its parent elements, unless
-          one of the parent elements stops the propagation of the event. Event bubbling is important as it allows us to
-          get access to the parent events of the DOM architecture of a web page. By this we can easily access, modify
-          efficiently higher level elements. Besides, to stop unnecessary propagation we can use
-          "stopImmediatePropagation()" or "stopPropagation()" method.
-        </p>
-      </div>
-    </div>
-
-    <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
-      <div class="collapse-title text-xl font-medium">
-        4. What is a callback function and why will you use it?
-      </div>
-      <div class="collapse-content">
-        <p>
-          In JavaScript callback function an unique function which is passed as an argument in another function. This
-          callback function is called inside the higher level or parent function and execute after the execution of the
-          parent function. callback functions are mostly used in the event-driven programming like JavaScript to handle
-          asynchronous programming. Usually to make an asynchronous request on a server using an object, we can provide
-          a callback function to be executed when the server responds with object data.
-        </p>
-      </div>
-    </div>
-  </div>
 
 </body>
 
