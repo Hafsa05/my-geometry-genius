@@ -139,6 +139,7 @@ function displayTableData(serial, shapeName, areaValue) {
 }
 
 // cart hover color changing part 
+
 function generateRandomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
