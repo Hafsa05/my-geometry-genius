@@ -139,6 +139,14 @@ function displayTableData(serial, shapeName, areaValue) {
 }
 
 // cart hover color changing part 
+function generateRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const color = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    return color;
+}
+
 const coloredTriangle = document.querySelector("#colorChangeTriangle");
 const coloredRectangle = document.querySelector("#colorChangeRectangle");
 const coloredParallelogram = document.querySelector("#colorChangeParallelogram");
@@ -178,11 +186,3 @@ coloredEllipse.addEventListener("mouseenter", function () {
 // coloredRectangle.addEventListener("mouseleave", function () {
 //     this.style.backgroundColor = "#fff";
 // });
-
-function generateRandomColor() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    const color = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    return color;
-}
