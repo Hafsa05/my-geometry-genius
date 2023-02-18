@@ -138,16 +138,51 @@ function displayTableData(serial, shapeName, areaValue) {
     }
 }
 
-// cart color changing part 
-const getColors = (colorId) => {
-    const randomNumber = Math.floor(Math.random() * 16777215);
-    const randomCode = "#" + randomNumber.toString(16);
-    colorId.style.backgroundColor = randomCode;
-}
+// cart hover color changing part 
+const coloredTriangle = document.querySelector("#colorChangeTriangle");
+const coloredRectangle = document.querySelector("#colorChangeRectangle");
+const coloredParallelogram = document.querySelector("#colorChangeParallelogram");
+const coloredRhombus = document.querySelector("#colorChangeRhombus");
+const coloredPentagon = document.querySelector("#colorChangePentagon");
+const coloredEllipse = document.querySelector("#colorChangeEllipse");
 
-document.getElementById("colorChangeTriangle").addEventListener("mousemove", getColors(colorChangeTriangle));
-document.getElementById("colorChangeRectangle").addEventListener("mousemove", getColors(colorChangeRectangle));
-// document.getElementById("colorChangeParallelogram").addEventListener("mousemove", getColors(colorChangeParallelogram));
-// document.getElementById("colorChangeRhombus").addEventListener("mousemove", getColors(colorChangeRhombus));
-// document.getElementById("colorChangePentagon").addEventListener("mousemove", getColors(colorChangePentagon));
-// document.getElementById("colorChangeEllipse").addEventListener("mousemove", getColors(colorChangeEllipse));
+coloredTriangle.addEventListener("mouseenter", function () {
+    const color = generateRandomColor();
+    this.style.backgroundColor = color;
+});
+
+coloredRectangle.addEventListener("mouseenter", function () {
+    const color = generateRandomColor();
+    this.style.backgroundColor = color;
+});
+coloredParallelogram.addEventListener("mouseenter", function () {
+    const color = generateRandomColor();
+    this.style.backgroundColor = color;
+});
+coloredRhombus.addEventListener("mouseenter", function () {
+    const color = generateRandomColor();
+    this.style.backgroundColor = color;
+});
+coloredPentagon.addEventListener("mouseenter", function () {
+    const color = generateRandomColor();
+    this.style.backgroundColor = color;
+});
+coloredEllipse.addEventListener("mouseenter", function () {
+    const color = generateRandomColor();
+    this.style.backgroundColor = color;
+});
+
+// coloredTriangle.addEventListener("mouseleave", function () {
+//     this.style.backgroundColor = "#fff";
+// });
+// coloredRectangle.addEventListener("mouseleave", function () {
+//     this.style.backgroundColor = "#fff";
+// });
+
+function generateRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const color = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    return color;
+}
