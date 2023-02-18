@@ -139,12 +139,12 @@ function displayTableData(serial, shapeName, areaValue) {
 }
 
 // cart color changing part 
-// const getColors = (colorId) => {
-//     const randomNumber = Math.floor(Math.random() * 16777215);
-//     const randomCode = "#" + randomNumber.toString(16);
-//     colorId.style.backgroundColor = randomCode;
-// }
-// document.getElementById("colorChangeTriangle").addEventListener("mousemove", getColors(colorChangeTriangle));
+const getColors = (colorId) => {
+    const randomNumber = Math.floor(Math.random() * 16777215);
+    const randomCode = "#" + randomNumber.toString(16);
+    colorId.style.backgroundColor = randomCode;
+}
+document.getElementById("colorChangeTriangle").addEventListener("mousemove", getColors(colorChangeTriangle));
 // document.getElementById("colorChangeRectangle").addEventListener("mousemove", getColors(colorChangeRectangle));
 // document.getElementById("colorChangeParallelogram").addEventListener("mousemove", getColors(colorChangeParallelogram));
 // document.getElementById("colorChangeRhombus").addEventListener("mousemove", getColors(colorChangeRhombus));
